@@ -601,8 +601,9 @@ def padded_collate_packed(
     input_pos = torch.stack([x["input_pos"] for x in batch])
     seq_lens = [x["seq_lens"] for x in batch]
 
-    block_mask = packed_block_causal_mask(
+    block_mask = create_sliding_window_mask_flex(
         seq_lens=seq_lens,
+        window_size=4096
     )
 
     return {
