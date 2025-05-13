@@ -603,7 +603,7 @@ def padded_collate_packed(
 
     block_mask = create_sliding_window_mask_flex(
         seq_lens=seq_lens,
-        window_size=4096
+        window_size=1024
     )
 
     return {

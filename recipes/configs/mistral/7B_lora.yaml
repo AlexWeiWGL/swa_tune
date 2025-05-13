@@ -28,7 +28,7 @@ output_dir: /tmp/torchtune/mistral_7B/lora # /tmp may be deleted by your system.
 tokenizer:
   _component_: torchtune.models.mistral.mistral_tokenizer
   path: /tmp/Mistral-7B-v0.1/tokenizer.model
-  max_seq_len: 16000
+  max_seq_len: 8192
 
 # Dataset
 dataset:
